@@ -1,0 +1,11 @@
+@media (min-width: 768px) {
+  .send {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    &__left {
+      // flex-grow: 2;
+      width: 50%;
+    }
+  }
+}

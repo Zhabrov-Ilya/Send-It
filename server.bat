@@ -1,0 +1,1 @@
+browser-sync start --server --files "php/*.php,styles/*.css,js/*.js,html/*.html,*.*"

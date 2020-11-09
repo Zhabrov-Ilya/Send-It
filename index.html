@@ -1,11 +1,331 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SendIt</title>
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="js/sliderHandMade.js"></script>
+    <script defer src="js/accordion.js"></script>
+    <script defer src="js/burger.js"></script>
+    <script defer src="js/swiper.js" type="module"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__block center">
+        <a href="#" class="header__logo">
+          <img src="img/header__logo.png" alt="logo" />
+        </a>
+        <div class="hamburger-menu">
+          <input id="menu__toggle" type="checkbox"/>
+          <img class="hamburger-logo" src="img/hamburger-logo.png" alt="hamburger-logo">
+          <label class="menu__btn" for="menu__toggle">
+            <span></span>
+          </label>
+          <ul class="menu__box">
+            <li><a class="menu__item" href="#">Главная</a></li>
+            <li><a class="menu__item" href="#">Описание</a></li>
+            <li><a class="menu__item" href="#">Преимущества</a></li>
+            <li><a class="menu__item" href="#">Отзывы</a></li>
+            <li><a class="menu__item" href="#">Партнёры</a></li>
+            <li><a class="menu__item" href="#">Гарантии</a></li>
+            <li><a class="menu__item" href="#">FAQ</a></li>
+            <div class="callback center">
+              <h3>Остались вопросы?</h3>
+              <div class="i">
+                <input type="text" class="callback__input" placeholder="Ваш телефон" />
+              </div>
+              <a href="#" class="button">
+                <h3>заказать звонок</h3>
+              </a>
+              <div class="personal">
+                <input type="checkbox" />
+                <p>Я согласен на обработку персональных данных</p>
+              </div>
+            </div>
+            <div class="social center">
+              <a href="#" class="social_link"><img src="img/hamburger-vk.png" alt="vk"></a>
+              <a href="#" class="social_link"><img src="img/hamburger-instagram.png" alt="instagram"></a>
+              <a href="#" class="social_link"><img src="img/hamburger-facebook.png" alt="facebook"></a>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="send center">
+      <h1>ПРИДУМАЙТЕ ЧТО ОТПРАВИТЬ</h1>
+      <h2>А посылка доедет сама</h2>
+      <a href="#" class="button">
+        <h3>отправить посылку</h3>
+      </a>
+    </div>
+    <div class="send send_brown center">
+      <img src="img/agregator.png" alt="agregator" class="agregator-img" />
+      <div class="send__left">
+        <h3>Мы – агрегатор служб доставки</h3>
+        <p>
+          С нами удобно вам, вашим клиентам и курьерским службам. Для вас наши
+          услуги бесплатны, так как мы получаем бонусы от служб доставок за
+          предоставленный объем заказов, а вы получаете надежный сервис в подарок!
+        </p>
+        <a href="#" class="button">
+          <h3>отправить посылку</h3>
+        </a>
+      </div>
+    </div>
+    <div class="steps center">
+      <div class="step">
+        <img src="img/Step1.png" alt="Step1" />
+        <h2>Шаг 1</h2>
+        <p>Придумайте что и кому отправить</p>
+      </div>
+      <div class="step">
+        <img src="img/Step2.png" alt="Step2" class="step__img" />
+        <h2>Шаг 2</h2>
+        <p>
+          Создайте заявку на сайте SendIt - Ваш персональный менеджер позвонит и
+          подтвердит запрос, уточнит все необходимые данные
+        </p>
+      </div>
+      <div class="step">
+        <img src="img/Step3.png" alt="Step3" class="step__img" />
+        <h2>Шаг 3</h2>
+        <p>
+          К Вам приезжает курьер, забирает посылку, Вы подписываете один
+          документ
+        </p>
+      </div>
+      <div class="step">
+        <img src="img/Step4.png" alt="Step4" class="step__img" />
+        <h2>Шаг 4</h2>
+        <p>
+          Вы ждёте подтверждения доставки, слова радости и благодарности от
+          адресата :)
+        </p>
+      </div>
+    </div>
+    <div class="send send_brown center">
+      <h2>Мы берём все заботы по доставке на себя!</h2>
+      <a href="#" class="button">
+        <h3>отправить посылку</h3>
+      </a>
+    </div>
+    <div class="callback center">
+      <h2>хотите мы вам перезвоним?</h2>
+      <p>Закажите звонок, и менеджер вам всё расскажет и объяснит</p>
+      <div class="i">
+        <input type="text" class="callback__input" placeholder="Ваш телефон" />
+      </div>
+      <a href="#" class="button button_yellow">
+        <h3>заказать звонок</h3>
+      </a>
+      <div class="personal">
+        <input type="checkbox" />
+        <p>Я согласен на обработку персональных данных</p>
+      </div>
+    </div>
+    <!-- TODO: Слайдер отзывов -->
+    <div class="reviews center">
+      <h2>ОТЗЫВЫ</h2>
+      <div class="slider-box">
+        <img src="img/slider-row.png" alt="slider-arrow" class="slider-arrow" id="swiper-prev">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiper-slide__header">
+                <div class="swiper-slide__header_left">
+                  <img src="img/review1.png" alt="review1">
+                </div>
+                <div class="swiper-slide__header_right">
+                  <h2>Дарья</h2>
+                  <h3>La Intuicion</h3>
+                  <h6>Посылка: товары</h6>
+                  <h6>Откуда: Москва</h6>
+                  <h6>Куда: Нижневартовск</h6>
+                </div>
+              </div>
+              <p class="swiper-slide__footer">Отличный и качественный сервис.
+                Долго искали курьерскую службу для доставки наших товаров. Решили попробовать и были приятно удивлены, что помимо удобного сайта, компания предоставляет доступ в личный кабинет, где реализованы многие наши потребности (ведение адресной базы, выбор и вызов курьера в пару кликов).
+              </p> 
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide__header">
+                <div class="swiper-slide__header_left">
+                  <img src="img/review2.png" alt="review1">
+                </div>
+                <div class="swiper-slide__header_right">
+                  <h2>Елена</h2>
+                  <h3>Global Logic</h3>
+                  <h6>Посылка: товары</h6>
+                  <h6>Откуда: Москва</h6>
+                  <h6>Куда: Калининград</h6>
+                </div>
+              </div>
+              <p class="swiper-slide__footer">
+                Мне нравится работать с SendIt, потому что это удобно: моментальный расчет стоимости доставки, удобный сайт, выборка среди основных надёжных логистических компаний и самый значимый фактор – всё это можно оперативно организовать и не волноваться. И ещё хочу сказать отдельное спасибо менеджеру за отзывчивость.
+              </p> 
+            </div>
+          </div>
+        </div>
+        <img src="img/slider-row.png" alt="slider-arrow" class="slider-arrow" id="swiper-next">
+      </div>
+    </div>
+    <div class="advantages center">
+      <h2>НАШИ ПРЕИМУЩЕСТВА</h2>
+      <div class="advantages__container">
+        <div class="advantages__row">
+          <div class="advantages__block">
+            <img src="img/Group 9.png" alt="Group 9" />
+            <p>Бесплатный сервис</p>
+          </div>
+          <div class="advantages__block">
+            <img src="img/Group 10.png" alt="Group 10" />
+            <p>Огромный выбор вариантов доставки</p>
+          </div>
+          <div class="advantages__block">
+            <img src="img/Group 11.png" alt="Group 11" />
+            <p>4 параметра лучшего предложения</p>
+          </div>
+        </div>
+        <div class="advantages__row">
+          <div class="advantages__block">
+            <img src="img/Group 12.png" alt="Group 12" />
+            <p>Удобство заказа</p>
+          </div>
+          <div class="advantages__block">
+            <img src="img/Group 13.png" alt="Group 13" />
+            <p>Online-поддержка</p>
+          </div>
+          <div class="advantages__block">
+            <img src="img/Group 14.png" alt="Group 14" />
+            <p>Единый номер отслеживания</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Слайдер гарантий -->
+    <div class="guarantees center">
+      <h2>НАШИ ГАРАНТИИ</h2>
+      <div class="slider-box">
+        <img src="img/slider-row.png" id="prev" alt="slider-arrow" class="slider-arrow">
+        <div class="slider">
+          <div class="slide active">
+            <div class="slide__heading">
+              <img src="img/guarantee1.png" alt="guarantee1">
+              <h3>Страховка отправлений</h3>
+            </div>
+            <p>Контроль работы курьеров в онлайн режиме. Страхование по запросу клиента Каждый куръер находится под пристальным вниманием менеджеров SendIt</p>
+            <a href="#" class="button">
+              <h3>подробнее</h3>
+            </a>
+          </div>
+          <div class="slide">
+            <div class="slide__heading">
+              <img src="img/guarantee2.png" alt="guarantee2">
+              <h3>Прозрачность расчетов</h3>
+            </div>
+            <p>Чтобы узнать точную стоимость отправления вам не нужно связываться с каждой курьерской службой в отдельности и сравнивать полученные предложения, просто воспользуйтесь нашим сервисом</p>
+            <a href="#" class="button">
+              <h3>подробнее</h3>
+            </a>
+          </div>
+          <div class="slide">
+            <div class="slide__heading">
+              <img src="img/guarantee3.png" alt="guarantee3">
+              <h3>Лучшие поставщики</h3>
+            </div>
+            <p>Мы работаем с самыми надежными и известными операторами доставки. Проверка надежности курьерской компании, экспертная оценка качества предоставляемых услуг</p>
+            <a href="#" class="button">
+              <h3>подробнее</h3>
+            </a>
+          </div>
+        </div>
+        <img src="img/slider-row.png" id="next" alt="slider-arrow" class="slider-arrow">
+      </div>
+    </div>
+    <!-- Аккордеон -->
+    <div class="FAQ center">
+      <h2>ОСТАЛИСЬ СОМНЕНИЯ?</h2>
+      <div class="accordion-box">
+        <div class="accordion">
+          <p>На бумажную волокиту уйдёт много времени, а мне нужно доставить срочно!</p>
+          <div class="panel">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus possimus perferendis exercitationem error id mollitia repellat quam rem vero accusantium. A incidunt animi dolores laudantium.</p>
+          </div>
+        </div>
+        <img src="img/Rectangle.png" alt="toggle" class="toggle">
+      </div>
+      <div class="accordion-box">
+        <div class="accordion">
+          <p>Мне необходимо совершить доставку по нескольким адресам, нужно много чего заполнять</p>
+          <div class="panel">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus possimus perferendis exercitationem error id mollitia repellat quam rem vero accusantium. A incidunt animi dolores laudantium.</p>
+          </div>
+        </div>
+        <img src="img/Rectangle.png" alt="toggle" class="toggle">
+      </div>
+      <div class="accordion-box">
+        <div class="accordion">
+          <p>Вы не сможете доставить посылку за границу</p>
+          <div class="panel">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus possimus perferendis exercitationem error id mollitia repellat quam rem vero accusantium. A incidunt animi dolores laudantium.</p>
+          </div>
+        </div>
+        <img src="img/Rectangle.png" alt="toggle" class="toggle">
+      </div>
+      <div class="accordion-box">
+        <div class="accordion">
+          <p>Вы не занимаетесь такими простыми грузами, как мебель</p>
+          <div class="panel">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus possimus perferendis exercitationem error id mollitia repellat quam rem vero accusantium. A incidunt animi dolores laudantium.</p>
+          </div>
+        </div>
+        <img src="img/Rectangle.png" alt="toggle" class="toggle">
+      </div>
+      <div class="accordion-box">
+        <div class="accordion">
+          <p>Я отправляю вместе с коллегами, мы можем легко запутаться где чьё</p>
+          <div class="panel">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus possimus perferendis exercitationem error id mollitia repellat quam rem vero accusantium. A incidunt animi dolores laudantium.</p>
+          </div>
+        </div>
+        <img src="img/Rectangle.png" alt="toggle" class="toggle">
+      </div>
+      <div class="accordion-box">
+        <div class="accordion">
+          <p>Нужно заполнять кучу документов</p>
+          <div class="panel">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus possimus perferendis exercitationem error id mollitia repellat quam rem vero accusantium. A incidunt animi dolores laudantium.</p>
+          </div>
+        </div>
+        <img src="img/Rectangle.png" alt="toggle" class="toggle">
+      </div>
+    </div>
+    <div class="question center">
+      <h2>Остались вопросы?</h2>
+      <div class="i">
+        <input type="text" class="question__input" placeholder="Ваш телефон" />
+      </div>
+      <a href="#" class="button">
+        <h3>заказать звонок</h3>
+      </a>
+      <div class="personal">
+        <input type="checkbox" />
+        <p>Я согласен на обработку персональных данных</p>
+      </div>
+      <div class="hr"></div>
+      <div class="rights">
+        <p>© Сами копипастим и вам разрешаем</p>
+        <p>2020</p>
+      </div>
+    </div>
+  </div>
+  </body>
 </html>
