@@ -4,7 +4,7 @@ body {
 
 h1 {
   margin: 0;
-  font-size: 28px;
+  font-size: 32px;
   color: #000000;
 }
 h2 {
@@ -33,17 +33,48 @@ p {
   padding: 0 20px;
 }
 
-//FIXME: бэкграунд-картинка у header
 .header {
   background-image: url(../img/header.png);
   background-repeat: no-repeat;
   background-position: 85%;
   background-size: cover;
   height: 277px;
-  &__block {
+  &__logo img {
+    width: 100px;
+  }
+  &__top {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-top: 27px;
+    >.menu__item {
+      display: none;
+      font-size: 14px;
+      color: #FFFFFF;
+    }
+  }
+  &__bottom {
+    display: none;
+    margin-top: 55px;
+    // width: 30%;
+    h1 {
+      width: 60%;
+      margin-top: 55px;
+      color: #ffffff;
+    }
+    h2{
+      margin-top: 40px;
+      font-size: 28px;
+      color: #ffffff;
+    }
+    a {
+      margin-top: 40px;
+      width: 30%;
+    }
+  }
+  .menu__box {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -146,7 +177,7 @@ p {
         color: #ffffff;
         margin-bottom: 14px;
       }
-      .i {
+      .input {
         margin-top: 17px;
         padding: 0 50px 0 0;
       }
@@ -211,6 +242,7 @@ p {
   img {
     display: block;
     margin: 0 auto;
+    width: 100%;
   }
   > h1,
   > h2,
@@ -218,16 +250,32 @@ p {
   p {
     margin-bottom: 20px;
   }
-  &__left {
-    margin-top: 25px;
-  }
   &_brown {
-    background-color: #f7f7f7;
+  background-color: #f7f7f7;
   }
 }
 
-.agregator-img {
-  // padding-bottom: 25px;
+.agregator {
+  padding-top: 21px;
+  padding-bottom: 21px;
+  background-color: #f7f7f7;
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    object-fit: contain;
+  }
+  > h2 {
+    display: none;
+  }
+  > h1,
+  > h3,
+  p {
+    margin-bottom: 20px;
+  }
+  &__left {
+    margin-top: 25px;
+  }
 }
 
 .button {
@@ -252,12 +300,13 @@ p {
 .steps {
   padding-top: 21px;
   padding-bottom: 21px;
-  > .step {
+  .step {
     margin-bottom: 20px;
-    > h2 {
+    h2 {
       margin-bottom: 10px;
     }
-    > img {
+    img {
+      width: 100%;
       display: block;
       margin: 0 auto;
       margin-bottom: 20px;
@@ -268,6 +317,24 @@ p {
   }
 }
 
+.care {
+  padding-top: 21px;
+  padding-bottom: 21px;
+  background-color: #f7f7f7;
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+  > h1,
+  > h2,
+  > h3,
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+// FIXME: Отстилизовать чекбокс
 .callback {
   padding-top: 32px;
   padding-bottom: 17px;
@@ -287,7 +354,7 @@ p {
     color: #ffffff;
     margin-bottom: 14px;
   }
-  .i {
+  .input {
     padding: 0 50px 0 0;
   }
   &__input {
@@ -309,6 +376,7 @@ p {
     input {
       margin-left: 10px;
       margin-right: 8px;
+      background-color: #008dcd;
     }
     p {
       margin-top: 2px;
@@ -317,6 +385,8 @@ p {
   }
 }
 
+//Слайдер отзывов
+// FIXME: Исправить стрелки слайдера
 .reviews {
   padding-top: 27px;
   padding-bottom: 27px;
@@ -324,10 +394,10 @@ p {
     margin-top: 19px;
     display: flex;
     #swiper-prev {
-      margin-right: 10px;
+      // margin-right: 10px;
     }
     #swiper-next {
-      margin-left: 10px;
+      // margin-left: 10px;
       transform: rotate(180deg);
     }
   }
@@ -336,6 +406,7 @@ p {
       display: flex;
         &_left {
           > img {
+            max-width: 100px;
             display: block;
             margin-right: 19px;
           }
@@ -351,9 +422,12 @@ p {
         margin-top: 13px;
       }
     }
-  .slider-arrow {
-    display: block;
-    object-fit: none;
+  .swiper-arrow {
+    width: auto;
+    // height: auto;
+    // max-width: 9px;
+    // display: block;
+    object-fit: contain;
     margin-top: 43px;
     cursor: pointer;
   }
@@ -364,6 +438,8 @@ p {
   padding-bottom: 21px;
   background-color: #f7f7f7;
   &__container {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
     margin-top: 20px;
     img {
       width: 86px;
@@ -375,13 +451,9 @@ p {
       text-align: center;
     }
   }
-  &__row {
-    display: flex;
-    justify-content: space-around;
-  }
-  &__block {
-    width: 86px;
-  }
+  // &__block {
+  //   width: 86px;
+  // }
 }
 
 //Слайдер гарантий
@@ -394,7 +466,7 @@ p {
   .slider {
     margin-top: 20px;
     flex-grow: 1;
-    width: 258px;
+    // width: 258px;
     // max-height: 0;
     overflow: hidden;
     position: relative;
@@ -411,9 +483,9 @@ p {
     p {
       margin-top: 14px;
     }
-    .button {
-      margin-top: 10px;
-    }
+  }
+  .button {
+    margin-top: 10px;
   }
   .slide__heading {
     display: flex;
@@ -440,19 +512,23 @@ p {
   padding-top: 25px;
   padding-bottom: 25px;
   background-color: #d2ecf7;
-  h2 {
-    margin-bottom: 25px;
+  .accordion-container {
+    margin-top: 25px;
+    display: grid;
+    // grid-template: repeat(6) / 1;
+    grid-row-gap: 11px;
   }
   .accordion-box {
     display: flex;
+    align-items: center;
     background-color: #ffffff;
     border-radius: 32px;
     padding: 16px 24px;
     cursor: pointer;
-    margin-bottom: 11px;
-    &:last-child {
-      margin-bottom: 0;
-    }
+    // margin-bottom: 11px;
+    // &:last-child {
+    //   margin-bottom: 0;
+    // }
   }
   .panel {
     max-height: 0;
@@ -469,19 +545,19 @@ p {
   padding-top: 17px;
   padding-bottom: 17px;
   background-color: #e9e9e9;
-  a {
+  .a {
     margin-bottom: 12px;
   }
   h2 {
     text-transform: uppercase;
     margin-bottom: 17px;
   }
-  .i {
+  .input-container {
     padding: 0 50px 0 0;
   }
   &__input {
     width: 100%;
-    padding: 17px 24px;
+    padding: 16px 24px;
     margin-bottom: 9px;
     background-color: #e9e9e9;
     border: 1px solid #363636;
@@ -492,32 +568,61 @@ p {
       font-size: 16px;
     }
   }
+  .input-block {
+    .personal {
+      display: none;
+    }
+  }
   .personal {
+    margin-top: 12px;
     display: flex;
+    align-items: center;
     input {
-      margin-left: 10px;
+      display: block;
       margin-right: 8px;
     }
     p {
+      display: block;
       color: #9e9e9e;
       font-size: 10px;
+      width: 100%;
     }
-  }
+  }  
+}
+
+.footer-top {
+  background-color: #E9E9E9;
   .hr {
-    background-color: #c4c4c4;
     height: 1px;
-    width: 100%;
-    margin-top: 14px;
+    background-color: #C4C4C4;
   }
-  .rights {
-    display: flex;
+  img {
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 23px;
+    width: 140px;
+  }
+  .menu {
+    display: none;
     justify-content: space-between;
-    margin-top: 18px;
-    p {
-      font-size: 10px;
-      display: block;
-    }
+    flex-grow: 1;
+  }
+}
+
+.rights {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 18px;
+  padding-bottom: 10px;
+  background-color: #E9E9E9;
+  p {
+    font-size: 10px;
+    display: block;
+  }
+  .social {
+    display: none;
   }
 }
 
 @import "m768-1024";
+@import "m1024-1920";

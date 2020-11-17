@@ -1,11 +1,262 @@
 @media (min-width: 768px) {
-  .send {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+  h1 {
+    font-size: 44px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  p {
+    font-size: 16px;
+  }
+
+  .center {
+    padding: 0 34px;
+  }
+
+  .header {
+    height: 415px;
+    background-position: 70%;
+    &__top {
+      >.menu__item {
+        display: block;
+      }
+    }
+    &__bottom {
+      display: block;
+    }
+    .hamburger-menu {
+      display: none;
+    }
+  }
+
+  .send_header {
+    display: none;
+  }
+
+  .agregator {
+    padding-top: 25px;
+    padding-bottom: 35px;
+    >h2 {
+      display: inline;
+    }
+    &__block {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+    }
+    img {
+      width: 58%;
+    }
     &__left {
-      // flex-grow: 2;
+      margin-top: 0;
+      margin-right: 22px;
+      p {
+        font-size: 14px;
+      }
+      > h3 {
+        display: none;
+      }
+      // width: 50%;
+    }
+  }
+
+  .button {
+    min-width: 280px;
+  }
+
+  .steps {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    grid-column-gap: 80px;
+    padding-top: 38px;
+    padding-bottom: 56px;
+    h2 {
+      font-size: 24px;
+    }
+    .step {
+      &:nth-child(3) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .care {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    h2 {
+      font-size: 28px;
+      margin-bottom: 0px;
+    }
+    a {
       width: 50%;
+    }
+  }
+
+  .callback {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 31px;
+    padding-bottom: 14px;
+    h2 {
+      font-size: 28px;
+    }
+    &__left {
+      width: 50%;
+    }
+  }
+
+  .reviews {
+    padding-top: 48px;
+    padding-bottom: 40px;
+    .slider-box {
+      #swiper-prev {
+        margin-right: 40px;
+      }
+      #swiper-next {
+        margin-left: 40px;
+      }
+    }
+    .swiper-slide__footer {
+      font-size: 14px;
+    }
+  }
+
+  .advantages {
+    padding-top: 37px;
+    padding-bottom: 50px;
+    &__container {
+      // display: flex;
+      grid-template: 1fr / repeat(6, 1fr);
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+
+  .guarantees {
+    padding-top: 45px;
+    padding-bottom: 40px;
+    .slider-arrow {
+      display: none;
+    }
+    .slider {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      // display: grid;
+      // grid-template: 1fr 1fr / 1fr 1fr 1fr;
+      position: inherit;
+      overflow: visible;
+      flex-grow: 0;
+      min-height: 0px;
+      margin-right: -18px;
+      p {
+        flex-grow: 1;
+        font-size: 12px;
+      }
+      .button {
+        min-width: 220px;
+      }
+    }
+    .slide {
+      // width: auto;
+      display: flex;
+      flex-direction: column;
+      position: inherit;
+      margin-right: 18px;
+    }
+  }
+
+  .FAQ {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .question {
+    padding-top: 20px;
+    padding-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+      width: 220px;
+      margin-right: 20px;
+      font-size: 19px;
+      margin-top: 13px;
+    }
+    .buttons-block {
+      margin-top: 13px;
+      display: flex;
+      justify-content: space-between;
+      // align-items: center;
+    }
+    .input-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .personal {
+        margin-top: 0;
+        display: flex;
+      }
+    }
+    .input-container {
+      max-width: 174px;
+      // margin-top: 13px;
+    }
+    .button-block {
+      margin-left: 20px;
+      .personal {
+        display: none;
+      }
+    }
+    .button {
+      min-width: 220px;
+    }
+  }
+
+  .footer-top {
+    img {
+      width: 99px;
+    }
+    .footer__logo {
+      margin-right: 20px;
+    }
+    &__menu {
+      display: flex;
+      align-items: center;
+    }
+    .menu {
+      display: flex;
+    }
+    .menu__item {
+      color: #000000;
+    }
+  }
+
+  .rights {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    .social {
+      display: block;
+      justify-self: center;
+      img {
+        width: 18px;
+        margin-right: 16px;
+      }
+    }
+    p {
+      font-size: 12px;
+    }
+    .year {
+      justify-self: end;
     }
   }
 }

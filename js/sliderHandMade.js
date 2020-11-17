@@ -5,22 +5,25 @@ let slides = document.querySelectorAll(".slide");
 let next = document.querySelector("#next");
 let prev = document.querySelector("#prev");
 
+let tabletWidth = window.matchMedia("(max-width: 767px)");
+tabletWidth.addListener(slidesPosition);
+slidesPosition(tabletWidth);
+
+
 //Стартовое положение слайдов
-function slidesPosition() {
-  let slideWidth = document.querySelector(".slide").offsetWidth;
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.left = i * slideWidth + "px";
+function slidesPosition(tabletWidth) {
+  if (tabletWidth.matches) {
+    let slideWidth = document.querySelector(".slide").offsetWidth;
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.left = i * slideWidth + "px";
+    }
+  } else {
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.left = 0 + 'px';
+    }
   }
 }
-slidesPosition();
-
-//Подгонка высоты слайдера для избежания вылезания контента за его пределы
-function sliderScrollHeight() {
-  let slider = document.querySelector(".slider");
-  let activeEl = document.querySelector(".active");
-  slider.style.minHeight = activeEl.offsetHeight + "px";
-}
-sliderScrollHeight();
+slidesPosition(tabletWidth);
 
 //Подгонка ширины слайдера при изменении размеров экрана
 window.onresize = function () {
@@ -29,10 +32,20 @@ window.onresize = function () {
   activeEl.classList.toggle("active"); //убираем
   firstSlide.classList.toggle("active"); //добавляем
 
-  slidesPosition();
+  slidesPosition(tabletWidth);
 
   sliderScrollHeight();
 };
+
+//Подгонка высоты слайдера для избежания вылезания контента за его пределы
+function sliderScrollHeight() {
+  if (tabletWidth.matches) {
+    let slider = document.querySelector(".slider");
+    let activeEl = document.querySelector(".active");
+    slider.style.minHeight = activeEl.offsetHeight + "px";
+  }
+}
+sliderScrollHeight();
 
 //Переключение на предыдущий слайд
 prev.onclick = function () {
